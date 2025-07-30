@@ -15,6 +15,7 @@
     - name: Setting NTP Server Settings
       community.routeros.command:
         commands:
+          - system ntp client set enabled=yes
           - system ntp client set primary-ntp={{ ntp_server }}
           - system ntp client set secondary-ntp={{ ntp_server }}
           - system ntp client set server-dns-names={{ server_dns_names }}
