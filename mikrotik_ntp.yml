@@ -1,0 +1,8 @@
+---
+- name: Set NTP server on MikroTik
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Set NTP server via raw SSH command
+      raw: >
+        /system ntp client set enabled=yes primary-ntp={{ ntp_server }}
