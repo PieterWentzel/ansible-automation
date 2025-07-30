@@ -10,13 +10,11 @@
     ansible_network_os: community.routeros.routeros
     ntp_server: "{{ ntp_server }}"
     server_dns_names: "{{ server_dns_names }}"
-   
-    
 
   tasks:
-    - name: Setting NTP Server Setings
-      community.routeros.command:
+    - name: Setting NTP Server Settings
+      community.routeros.routeros_command:
         commands:
           - /system/ntp/client/set enabled=yes primary-ntp={{ ntp_server }}
-          - /system/ntp/client/set enabled=yes secondary-ntp={{ ntp_server }}
+          - /system/ntp/client/set secondary-ntp={{ ntp_server }}
           - /system/ntp/client/set server-dns-names={{ server_dns_names }}
