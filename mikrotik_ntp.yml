@@ -5,9 +5,9 @@
   connection: ansible.netcommon.network_cli
 
   vars:
-    ansible_network_os: community.routeros.routeros
     ansible_user: "{{ router_username }}"
     ansible_password: "{{ router_password }}"
+    ansible_network_os: community.routeros.routeros
     ntp_server: "{{ ntp_server }}"
 
   tasks:
