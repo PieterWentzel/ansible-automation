@@ -9,7 +9,7 @@
     ansible_password: "{{ router_password }}"
     ansible_network_os: community.routeros.routeros
     ntp_server: "{{ ntp_server }}"
-    server-dns-names : "{{ server-dns-names }}"
+    server-dns-names: "{{ server-dns-names }}"
    
     
 
