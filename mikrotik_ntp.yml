@@ -9,7 +9,7 @@
     ansible_password: "{{ router_password }}"
     ansible_network_os: community.routeros.routeros
     ntp_server: "{{ ntp_server }}"
-    server-dns-names: "{{ server-dns-names }}"
+    server_dns_names: "{{ server_dns_names }}"
    
     
 
@@ -19,4 +19,4 @@
         commands:
           - /system/ntp/client/set enabled=yes primary-ntp={{ ntp_server }}
           - /system/ntp/client/set enabled=yes secondary-ntp={{ ntp_server }}
-          - /system/ntp/client/set server-dns-names={{ server-dns-names }}
+          - /system/ntp/client/set server-dns-names={{ server_dns_names }}
