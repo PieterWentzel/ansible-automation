@@ -12,6 +12,6 @@
 
   tasks:
     - name: Set primary NTP server
-      community.routeros.routeros_command:
+      community.routeros.command:
         commands:
           - /system/ntp/client/set enabled=yes primary-ntp={{ ntp_server }}
